@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="hangman3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hangman3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="LightSlateGray"
+    >
+    <Grid>
+        <Line Stroke="Brown" X1="160" X2="160" Y1="110" Y2="480" StrokeThickness="9"/>
+        <Line Stroke="Brown" X1="160" X2="320" Y1="110" Y2="110" StrokeThickness="9"/>
+        <Line Stroke="Yellow" X1="320" X2="320" Y1="110" Y2="180" StrokeThickness="4"/>
+        <Line Stroke="Brown" X1="160" X2="80" Y1="480" Y2="480" StrokeThickness="9"/>
+        <Line Stroke="Brown" X1="160" X2="240" Y1="480" Y2="480" StrokeThickness="9"/>
+        <Line Stroke="Brown" X1="80" X2="20" Y1="480" Y2="560" StrokeThickness="9"/>
+        <Line Stroke="Brown" X1="300" X2="240" Y1="560" Y2="480" StrokeThickness="9"/>
+
+        <Ellipse x:Name="printHead" Margin="290,174,932,497" Stroke="Blue" StrokeThickness="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Line x:Name="printRightArm" Stroke="Green" X1="355" X2="320" Y1="250" Y2="220" StrokeThickness="6"/>
+        <Line x:Name="printLeftArm" Stroke="Green" X1="285" X2="320" Y1="250" Y2="220" StrokeThickness="6"/>
+        <Line x:Name="printBody" Stroke="Green" X1="320" X2="320" Y1="220" Y2="320" StrokeThickness="6"/>
+        <Line x:Name="printLeftLeg" Stroke="Green" X1="285" X2="320" Y1="370" Y2="320" StrokeThickness="6"/>
+        <Line x:Name="printRightLeg" Stroke="Green" X1="355" X2="320" Y1="370" Y2="320" StrokeThickness="6"/>
+        <Button x:Name="Test" Click="Test_Click" Content="TEST" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="501,85,0,0" VerticalAlignment="Top" Height="45" Width="118"/>
+        <Button x:Name="Reset" Click="Reset_Click" Content="RESET" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="664,85,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
+        <Button x:Name="Guess" Click="Guess_Click" Content="GUESS!" FontSize="25" Foreground="Black" Background="Beige" HorizontalAlignment="Left" Margin="664,315,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
+        <TextBox x:Name="txtInputGuess" Background="Beige" HorizontalAlignment="Left" Margin="530,315,0,0" Text="A" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="59" Height="45" Foreground="#FF020101"/>
+        <TextBlock x:Name="txtRightGuess" FontSize="18" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Left" Margin="480,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="160" RenderTransformOrigin="0.493,0.69"/>
+        <TextBlock x:Name="txtGameOver" FontSize="30" HorizontalAlignment="Left" Margin="366,159,0,0" Text="" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="140" Width="561"/>
+
+    </Grid>
+</Page>

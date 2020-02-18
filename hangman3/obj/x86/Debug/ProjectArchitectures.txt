@@ -1,0 +1,1 @@
+P:\gitlab projekt\hangman\hangman\hangman3\hangman3.csproj;x86
