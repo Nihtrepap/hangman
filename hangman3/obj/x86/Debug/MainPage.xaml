@@ -31,15 +31,14 @@
         <Line x:ConnectionId='11' x:Name="printLeftLeg" Stroke="Green" X1="285" X2="320" Y1="480" Y2="385" StrokeThickness="7" Opacity="0"/>
         <Line x:ConnectionId='12' x:Name="printRightLeg" Stroke="Green" X1="320" X2="380" Y1="385" Y2="480" StrokeThickness="7" Opacity="0"/>
         
-        <Button x:ConnectionId='13' x:Name="Test"                    Content="TEST" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="501,85,0,0" VerticalAlignment="Top" Height="45" Width="118"/>
-        <Button x:ConnectionId='14' x:Name="Reset"                     Content="RESET" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="664,85,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
-        <Button x:ConnectionId='15' x:Name="Guess"                     Content="GUESS!" FontSize="25" Foreground="Black" Background="Beige" HorizontalAlignment="Left" Margin="664,315,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
-        <TextBox x:ConnectionId='16' x:Name="txtInputGuess" Background="Beige" HorizontalAlignment="Left" Margin="530,315,0,0" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="59" Height="45" Foreground="#FF020101"/>
-        <TextBlock x:ConnectionId='17' x:Name="txtRightGuess" FontSize="18" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Left" Margin="480,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="160" RenderTransformOrigin="0.493,0.69"/>
-        <TextBlock x:ConnectionId='18' x:Name="txtGameOver" FontSize="30" HorizontalAlignment="Left" Margin="366,159,0,0" Text="" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="140" Width="561"/>
-        <Button x:ConnectionId='19' x:Name="NewWord"                       Content="New word" HorizontalAlignment="Left" Margin="236,19,0,0" VerticalAlignment="Top" Height="32"/>
-        <TextBox x:ConnectionId='20' x:Name="txtNewWord" HorizontalAlignment="Left" Margin="42,19,0,0" Text="" VerticalAlignment="Top" Width="139"/>
-        <TextBox x:ConnectionId='21' x:Name="txtWrongGuessed" TextAlignment="Center" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="480,500,0,0" VerticalAlignment="Top" Width="479" Height="40"/>
+        <Button x:ConnectionId='13' x:Name="RESTART"                     Content="RESET" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="664,85,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
+        <Button x:ConnectionId='14' x:Name="Guess"                     Content="GUESS!" FontSize="25" Foreground="Black" Background="Beige" HorizontalAlignment="Left" Margin="664,315,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
+        <TextBox x:ConnectionId='15' x:Name="txtInputGuess" Background="Beige" HorizontalAlignment="Left" Margin="530,315,0,0" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="59" Height="45" Foreground="#FF020101"/>
+        <TextBlock x:ConnectionId='16' x:Name="txtRightGuess" FontSize="18" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Left" Margin="480,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="160" RenderTransformOrigin="0.493,0.69"/>
+        <TextBlock x:ConnectionId='17' x:Name="txtGameOver" FontSize="30" HorizontalAlignment="Left" Margin="366,159,0,0" Text="" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="140" Width="561"/>
+        <Button x:ConnectionId='18' x:Name="NewWord"                       Content="New word" HorizontalAlignment="Left" Margin="236,19,0,0" VerticalAlignment="Top" Height="32"/>
+        <TextBox x:ConnectionId='19' x:Name="txtNewWord" HorizontalAlignment="Left" Margin="42,19,0,0" Text="" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:ConnectionId='20' x:Name="txtWrongGuessed" TextAlignment="Center" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="480,500,0,0" VerticalAlignment="Top" Width="479" Height="40"/>
 
     </Grid>
 </Page>

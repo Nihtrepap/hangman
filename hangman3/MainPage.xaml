@@ -31,8 +31,7 @@
         <Line x:Name="printLeftLeg" Stroke="Green" X1="285" X2="320" Y1="480" Y2="385" StrokeThickness="7" Opacity="0"/>
         <Line x:Name="printRightLeg" Stroke="Green" X1="320" X2="380" Y1="385" Y2="480" StrokeThickness="7" Opacity="0"/>
         
-        <Button x:Name="Test" Click="Test_Click" Content="TEST" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="501,85,0,0" VerticalAlignment="Top" Height="45" Width="118"/>
-        <Button x:Name="Reset" Click="Reset_Click" Content="RESET" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="664,85,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
+        <Button x:Name="Reset" Click="Reset_Click" Content="RESTART" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="664,85,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
         <Button x:Name="Guess" Click="Guess_Click" Content="GUESS!" FontSize="25" Foreground="Black" Background="Beige" HorizontalAlignment="Left" Margin="664,315,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
         <TextBox x:Name="txtInputGuess" Background="Beige" HorizontalAlignment="Left" Margin="530,315,0,0" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="59" Height="45" Foreground="#FF020101"/>
         <TextBlock x:Name="txtRightGuess" FontSize="18" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Left" Margin="480,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="160" RenderTransformOrigin="0.493,0.69"/>

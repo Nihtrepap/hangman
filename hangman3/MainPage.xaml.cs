@@ -39,7 +39,7 @@ namespace hangman3
             word = new StringBuilder(theWord.Length);
 
         }
-        private void Test_Click(object sender, RoutedEventArgs e) => GetLines();
+       
         
 
         private void Reset_Click(object sender, RoutedEventArgs e)
