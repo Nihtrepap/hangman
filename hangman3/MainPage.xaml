@@ -9,26 +9,36 @@
     Background="LightSlateGray"
     >
     <Grid>
-        <Line Stroke="Brown" X1="160" X2="160" Y1="110" Y2="480" StrokeThickness="9"/>
-        <Line Stroke="Brown" X1="160" X2="320" Y1="110" Y2="110" StrokeThickness="9"/>
+        <Line Stroke="Brown" X1="160" X2="160" Y1="110" Y2="480" StrokeThickness="12"/>
+        <Line Stroke="Brown" X1="210" X2="160" Y1="110" Y2="170" StrokeThickness="12"/>
+        <Line Stroke="Brown" X1="160" X2="320" Y1="110" Y2="110" StrokeThickness="12"/>
         <Line Stroke="Yellow" X1="320" X2="320" Y1="110" Y2="180" StrokeThickness="4"/>
-        <Line Stroke="Brown" X1="160" X2="80" Y1="480" Y2="480" StrokeThickness="9"/>
-        <Line Stroke="Brown" X1="160" X2="240" Y1="480" Y2="480" StrokeThickness="9"/>
-        <Line Stroke="Brown" X1="80" X2="20" Y1="480" Y2="560" StrokeThickness="9"/>
-        <Line Stroke="Brown" X1="300" X2="240" Y1="560" Y2="480" StrokeThickness="9"/>
+        <Line Stroke="Brown" X1="160" X2="80" Y1="480" Y2="480" StrokeThickness="12"/>
+        <Line Stroke="Brown" X1="160" X2="240" Y1="480" Y2="480" StrokeThickness="12"/>
+        <Line Stroke="Brown" X1="80" X2="20" Y1="480" Y2="560" StrokeThickness="12"/>
+        <Line Stroke="Brown" X1="300" X2="240" Y1="560" Y2="480" StrokeThickness="12"/>
 
-        <Ellipse x:Name="printHead" Margin="290,174,932,497" Stroke="Blue" StrokeThickness="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        <Line x:Name="printRightArm" Stroke="Green" X1="355" X2="320" Y1="250" Y2="220" StrokeThickness="6"/>
-        <Line x:Name="printLeftArm" Stroke="Green" X1="285" X2="320" Y1="250" Y2="220" StrokeThickness="6"/>
-        <Line x:Name="printBody" Stroke="Green" X1="320" X2="320" Y1="220" Y2="320" StrokeThickness="6"/>
-        <Line x:Name="printLeftLeg" Stroke="Green" X1="285" X2="320" Y1="370" Y2="320" StrokeThickness="6"/>
-        <Line x:Name="printRightLeg" Stroke="Green" X1="355" X2="320" Y1="370" Y2="320" StrokeThickness="6"/>
-        <Button x:Name="Test" Click="Test_Click" Content="TEST" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="501,85,0,0" VerticalAlignment="Top" Height="45" Width="118"/>
-        <Button x:Name="Reset" Click="Reset_Click" Content="RESET" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="664,85,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
+        <Line x:Name="eyeOne" Stroke="Black" X1="300" X2="300" Y1="205" Y2="230" StrokeThickness="15" Opacity="0" />
+        <Line x:Name="eyeTwo" Stroke="Black" X1="330" X2="330" Y1="205" Y2="230" StrokeThickness="15" Opacity="0" />
+        <Line x:Name="eyeThree" Stroke="Blue" X1="300" X2="300" Y1="215" Y2="220" StrokeThickness="5" Opacity="0" />
+        <Line x:Name="eyeFour" Stroke="Blue" X1="330" X2="330" Y1="215" Y2="220" StrokeThickness="5" Opacity="0" />
+        <Line x:Name="mouth" Stroke="Black" X1="295" X2="335" Y1="245" Y2="250" StrokeThickness="5" Opacity="0"/>
+
+        <Path x:Name="printHead" Stroke="Red" StrokeThickness="5" Data="M 320,180 C 500,310 100,270 320,180 " Opacity="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" UseLayoutRounding="False" VerticalAlignment="Stretch"/>
+        <Line x:Name="printRightArm" Stroke="Green" X1="355" X2="320" Y1="350" Y2="280" StrokeThickness="7" Opacity="0"/>
+        <Line x:Name="printLeftArm" Stroke="Green" X1="285" X2="320" Y1="350" Y2="280" StrokeThickness="7" Opacity="0"/>
+        <Line x:Name="printBody" Stroke="Green" X1="320" X2="320" Y1="265" Y2="390" StrokeThickness="7" Opacity="0"/>
+        <Line x:Name="printLeftLeg" Stroke="Green" X1="285" X2="320" Y1="480" Y2="385" StrokeThickness="7" Opacity="0"/>
+        <Line x:Name="printRightLeg" Stroke="Green" X1="320" X2="380" Y1="385" Y2="480" StrokeThickness="7" Opacity="0"/>
+
+        <Button x:Name="Reset" Click="Reset_Click" Content="RESTART" FontSize="25" Foreground="Black" Background="Orange" HorizontalAlignment="Left" Margin="23,27,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
         <Button x:Name="Guess" Click="Guess_Click" Content="GUESS!" FontSize="25" Foreground="Black" Background="Beige" HorizontalAlignment="Left" Margin="664,315,0,0" VerticalAlignment="Top" Width="118" Height="45"/>
-        <TextBox x:Name="txtInputGuess" Background="Beige" HorizontalAlignment="Left" Margin="530,315,0,0" Text="A" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="59" Height="45" Foreground="#FF020101"/>
-        <TextBlock x:Name="txtRightGuess" FontSize="18" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Left" Margin="480,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="160" RenderTransformOrigin="0.493,0.69"/>
+        <TextBox x:Name="txtInputGuess" Background="Beige" HorizontalAlignment="Left" Margin="530,315,0,0" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="59" Height="45" Foreground="#FF020101"/>
+        <TextBlock x:Name="txtRightGuess" FontSize="24" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Left" Margin="480,399,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="160" RenderTransformOrigin="0.493,0.69"/>
         <TextBlock x:Name="txtGameOver" FontSize="30" HorizontalAlignment="Left" Margin="366,159,0,0" Text="" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="140" Width="561"/>
+        <Button x:Name="NewWord" Click="NewWord_Click" Content="New word" HorizontalAlignment="Left" Margin="664,51,0,0" VerticalAlignment="Top" Height="32" Width="119"/>
+        <TextBox x:Name="txtNewWord" HorizontalAlignment="Left" Margin="483,51,0,0" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBlock x:Name="txtWrongGuessed" TextAlignment="Center" Foreground="Red" FontSize="24" HorizontalAlignment="Left" Margin="480,500,0,0" VerticalAlignment="Top" Width="479" Height="40"/>
 
     </Grid>
 </Page>
