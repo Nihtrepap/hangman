@@ -24,24 +24,17 @@ namespace hangman3
     public sealed partial class MainPage : Page
     {
         public int countClick = 0;
-        public string theWord;
-        public char[] showLetter;
-        public int count;
+        public string theInputWord;
         public StringBuilder word;
         public bool playing;
-        public bool chosen;
 
         public MainPage()
         {
             this.InitializeComponent();
             
-            theWord = "X";
-            word = new StringBuilder(theWord.Length);
-
-        }
-       
-        
-
+            theInputWord = "X";
+            word = new StringBuilder(theInputWord.Length);
+        }      
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             playing = false;
@@ -50,19 +43,15 @@ namespace hangman3
             txtRightGuess.Text = "";
             txtWrongGuessed.Text = "";
             word.Clear();
-            //LoadStringBuild();
             LoadOpacity();
             RemoveFace();
         }
-
         private void Guess_Click(object sender, RoutedEventArgs e)
         {
             if (txtInputGuess.Text.Length == 1) CheckLetter();
             else if(playing) txtGameOver.Text = $"Only use ONE char not {txtInputGuess.Text.Length}";
             txtInputGuess.Text = "";
         }
-
-        
         /// <summary>
         /// This method make the lines dissappear using opacity
         /// </summary>
@@ -87,7 +76,7 @@ namespace hangman3
             else if (countClick == 3) printLeftArm.Opacity = 1;
             else if (countClick == 4) printRightArm.Opacity = 1;
             else if (countClick == 5) printLeftLeg.Opacity = 1;
-            else if (countClick == 6) { printRightLeg.Opacity = 1; theWord = "X"; txtGameOver.Text = "YOU JUST KILLED THE STICKMAN\n=("; playing = false; }
+            else if (countClick == 6) { printRightLeg.Opacity = 1; theInputWord = "X"; txtGameOver.Text = "YOU JUST KILLED THE STICKMAN\n=("; playing = false; }
         }
         public void GetFace()
         {
@@ -110,29 +99,30 @@ namespace hangman3
          /// Will also check if char is guessed already.
          /// 
          /// <see cref="GetLines()"/>
+         /// <see cref="AddWrongLetter()"/>
          /// </summary>
         public void CheckLetter()
         {
-            if (theWord.Contains(txtInputGuess.Text.ToLower()) && theWord != "X")
+            if (theInputWord.Contains(txtInputGuess.Text.ToLower()) && theInputWord != "X")
             {
                 playing = true;
                 txtGameOver.Text = "";
-                for (int i = 0; i < theWord.Length; i++)
+                for (int i = 0; i < theInputWord.Length; i++)
                 {
-                    if (txtInputGuess.Text.ToLower().ToString() == theWord[i].ToString())
+                    if (txtInputGuess.Text.ToLower().ToString() == theInputWord[i].ToString())
                     {
                         word.Remove(i, 1);
                         word.Insert(i, txtInputGuess.Text.ToLower());
                     }
-                    if(word.ToString() == theWord)
+                    if(word.ToString() == theInputWord)
                     {
                         txtGameOver.Text = "YOU WON THE GAME AND SAVED THE STICKMAN! \n=)";
-                        theWord = "X";
+                        theInputWord = "X";
                     }
                     txtRightGuess.Text = word.ToString();
                 }
             }
-            else if (!theWord.Contains(txtInputGuess.Text) && theWord != "X")
+            else if (!theInputWord.Contains(txtInputGuess.Text) && theInputWord != "X")
             {
                 if (!txtWrongGuessed.Text.Contains(txtInputGuess.Text)){ GetLines(); AddWrongLetter(); }
                 else txtGameOver.Text = "Already guessed that char";
@@ -149,13 +139,13 @@ namespace hangman3
         }
         /// <summary>
         /// This builds up the stringbuild.
-        /// If my stringbuild is not as long as theWord, then input _
+        /// If my stringbuild is not as long as theWord, then input "_"
         /// </summary>
             public void LoadStringBuild()
         {
-            for (int i = 0; i < theWord.Length; i++)
+            for (int i = 0; i < theInputWord.Length; i++)
             {
-                if (word.ToString().Length != theWord.Length)
+                if (word.ToString().Length != theInputWord.Length)
                     word.Insert(i, '_');
             }
         }
@@ -166,12 +156,12 @@ namespace hangman3
         {
             if (playing == false)
             {
-                theWord = txtNewWord.Text.ToLower();
+                theInputWord = txtNewWord.Text.ToLower();
                 playing = true; 
                 LoadStringBuild();
                 txtNewWord.Text = "";
             }
-            else txtGameOver.Text = "Cant change word while in game";
+            else txtGameOver.Text = "Cant change word while ingame";
         }
 
         private void NewWord_Click(object sender, RoutedEventArgs e)
