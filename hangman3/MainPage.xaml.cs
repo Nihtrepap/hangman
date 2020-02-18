@@ -160,6 +160,7 @@ namespace hangman3
                 playing = true; 
                 LoadStringBuild();
                 txtNewWord.Text = "";
+                txtGameOver.Text = "";
             }
             else txtGameOver.Text = "Cant change word while ingame";
         }
