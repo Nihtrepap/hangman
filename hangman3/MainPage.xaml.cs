@@ -148,6 +148,7 @@ namespace hangman3
                 if (word.ToString().Length != theInputWord.Length)
                     word.Insert(i, '_');
             }
+            txtRightGuess.Text = word.ToString();
         }
         /// <summary>
         /// This will only work if the word is not chosen. 
